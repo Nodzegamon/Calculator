@@ -10,11 +10,11 @@
 <body>
   <div id="app">
     <div class="grid"> <!-- создаем базову разметку--> 
-      <input @keyup.enter="calc()" type="text" v-model="result" placeholder="0">
+      <input @keyup.enter="calc()" type="text" v-model="result" placeholder="0"> <!-- генерируем кнопки-->
       <button @click="input(num)" class="cell num" v-for="num in numbers">{{num}}</button><!-- создаем цикл v-for, который будет перебирать массив чисел--> 
-      <button @click="input(op)" class="cell op" v-for="op in operations">{{op}}</button>
-      <button @click="reset()" class="cell op">R</button>
-      <button @click="calc()" class="cell op">=</button>
+      <button @click="input(op)" class="cell op" v-for="op in operations">{{op}}</button><!-- создаем цикл v-for, который будет перебирать массив операций--> 
+      <button @click="reset()" class="cell op">R</button> <!-- генерируем кнопку reset-->
+      <button @click="calc()" class="cell op">=</button><!-- генерируем кнопку равно-->
     </div>
   </div>
 </body>
